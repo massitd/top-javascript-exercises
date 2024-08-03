@@ -1,9 +1,5 @@
-const removeFromArray = function(arr, ...filter) {
-    arr.forEach(i => {
-        if (arr[i] == filter){
-            arr.splice(i, 1);
-        }
-    });
+const removeFromArray = function(arr, ...remove) {
+    arr = arr.filter(item => !remove.includes(item));
     console.log(arr);
     return arr;
 };
